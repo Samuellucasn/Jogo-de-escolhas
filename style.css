@@ -1,0 +1,81 @@
+@charset "UTF";
+@font-face {
+    font-family: RainyHearts;
+    src: url(fonts/rainyhearts.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-prim: RainyHearts;
+    
+    --cor1: white;
+    --cor2: black;
+    --cor3: rgb(209, 209, 209);
+
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--cor2);
+}
+
+section{
+    margin: 12rem auto;
+    width: 50rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--cor1);
+}
+
+div{
+    background-color: var(--cor2);
+    align-self: center;
+    height: 50%;
+    font: 2rem var(--font-prim); 
+    text-align: center;
+    border: 0.3rem solid var(--cor1);
+    overflow: hidden;
+}
+
+h1{
+    padding: 1rem;
+    font-size: 2.0rem;
+}
+
+p{
+    align-items: center;
+    padding: 1.0rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor2);
+    font-weight: bold;
+
+    display: block;
+}
+
+.btn{
+    width: 33%;
+    background-color: var(--cor1);
+    font: 2rem var(--font-prim);
+
+    padding: 0.5rem;
+}
+.btn:hover, .btn-grande:hover{
+    background-color: var(--cor3);
+}
+
+.btn-grande {
+    width: 100%;
+}
+
+.btn01, .btn02 {
+    width: 50%;
+}
