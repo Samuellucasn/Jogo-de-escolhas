@@ -1,7 +1,11 @@
 @charset "UTF";
 @font-face {
-    font-family: RainyHearts;
-    src: url(fonts/rainyhearts.ttf);
+    font-family: PixelGame;
+    src: url(press-start-2p-font/PressStart2P-vaV7.ttf);
+}
+@font-face {
+    font-family: Pixel-Noir;
+    src: url(fonts/);
 }
 
 *{
@@ -11,11 +15,11 @@
 }
 
 :root {
-    --font-prim: RainyHearts;
+    --font-prim: PixelGame;
     
     --cor1: white;
     --cor2: black;
-    --cor3: rgb(209, 209, 209);
+    --cor3: rgb(137, 137, 137);
 
     font-size: 62.5%;
 }
@@ -26,10 +30,13 @@ body{
 
 section{
     margin: 12rem auto;
-    width: 50rem;
+    width: 30rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    font-family: var(--font-prim); 
+    font-weight: lighter;
+    line-height: 1rem;
     color: var(--cor1);
 }
 
@@ -37,7 +44,6 @@ div{
     background-color: var(--cor2);
     align-self: center;
     height: 50%;
-    font: 2rem var(--font-prim); 
     text-align: center;
     border: 0.3rem solid var(--cor1);
     overflow: hidden;
@@ -45,7 +51,6 @@ div{
 
 h1{
     padding: 1rem;
-    font-size: 2.0rem;
 }
 
 p{
@@ -59,17 +64,31 @@ a {
     font-weight: bold;
 
     display: block;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+    color: var(--cor1);
 }
 
 .btn{
     width: 33%;
     background-color: var(--cor1);
-    font: 2rem var(--font-prim);
+    
+    font-family: var(--font-prim); 
+    font-size: 1rem;
 
     padding: 0.5rem;
+    margin-top: 0.5rem;
+
+    border-style: none;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--cor2);
 }
 .btn:hover, .btn-grande:hover{
-    background-color: var(--cor3);
+    background-color: rgb(23, 23, 23);
+    border: 0.2rem groove rgb(255, 255, 255);
 }
 
 .btn-grande {
@@ -78,4 +97,8 @@ a {
 
 .btn01, .btn02 {
     width: 50%;
+}
+
+.final-novo > section {
+    background-color: red;
 }
