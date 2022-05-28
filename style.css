@@ -8,6 +8,12 @@
     src: url(fonts/);
 }
 
+@keyframes typingFrame {
+    to {
+        bottom: 100%;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -20,6 +26,7 @@
     --cor1: white;
     --cor2: black;
     --cor3: rgb(137, 137, 137);
+    --cor4: rgb(190, 66, 66);
 
     font-size: 62.5%;
 }
@@ -29,8 +36,8 @@ body{
 }
 
 section{
-    margin: 12rem auto;
-    width: 30rem;
+    margin: 50% auto;
+    width: 32.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,6 +45,8 @@ section{
     font-weight: lighter;
     line-height: 1rem;
     color: var(--cor1);
+
+    transform: translateY(-25%);
 }
 
 div{
@@ -46,11 +55,15 @@ div{
     height: 50%;
     text-align: center;
     border: 0.3rem solid var(--cor1);
-    overflow: hidden;
 }
 
 h1{
     padding: 1rem;
+    margin-top: 1rem;
+}
+
+h2{
+    margin-top: 0.2;
 }
 
 p{
@@ -65,7 +78,7 @@ a {
 
     display: block;
 
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; /*tira azul versão mobile*/
 }
 
 a:hover {
@@ -99,6 +112,39 @@ a:hover {
     width: 50%;
 }
 
-.final-novo > section {
+.final-novo {
     background-color: red;
+}
+
+.typing {
+    position: relative;
+    color: var(--cor1);
+}
+
+.titulo {
+    /*color: rgb(149, 190, 66);*/
+}
+
+.typing::before {
+    animation: typingFrame 2s steps(10) forwards;
+    background-color: var(--cor2);
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.titulo::before {
+    animation: typingFrame 1s steps(5) forwards;
+    background-color: var(--cor2);
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
 }
